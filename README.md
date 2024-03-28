@@ -14,6 +14,7 @@ Each component of the machine has its own class
 
 usage:
 ```python
+# A Kriegmarine enigma with 4 rotors
 enigma_config = {
     # plug board associations (A<->E,  B<->T and Z<->V)
     "plug_board_couples": ["AE", "BT", "ZV"],
