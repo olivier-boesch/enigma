@@ -27,25 +27,25 @@ class Rotor:
     """
     Enigma machine Rotor Class
     """
-    def __init__(self, name: str = "", start_letter: str = "A") -> None:
+    def __init__(self, model_name: str = "", start_letter: str = "A") -> None:
         """
         Create a new rotor of the given name and sets it to its start position
-        :param name: model of the rotor
+        :param model_name: model of the rotor
         :param start_letter: starting letter
         """
         # create next and previous
         self.next: "Rotor" = None
         self.previous: "Rotor" = None
         # stores the name and starting position (0 for A, 1 for B, ...)
-        self.name = name
+        self.name = model_name
         self.rotor_pos = 0
         # check if the rotor is known
-        if name not in ROTORS.keys():  # unknown rotor
+        if model_name not in ROTORS.keys():  # unknown rotor
             raise Exception("Invalid Rotor Name")
         # stores sequence
-        self.sequence: str = ROTORS[name][0]
+        self.sequence: str = ROTORS[model_name][0]
         # stores notches
-        self.notches: str = ROTORS[name][1]
+        self.notches: str = ROTORS[model_name][1]
         # go in start position
         self.go_to_start(start_letter)
 
@@ -106,3 +106,10 @@ class Rotor:
         # a notch is passed - > rotate the next one (on the left)
         if self.sequence[-1] in self.notches and self.next is not None:
             self.next.rotate()
+
+
+if __name__ == "__main__":
+    rotor = Rotor(model_name="I", start_letter="B")
+    assert rotor.encode_forward("A") == "K"
+    rotor.rotate()
+    assert rotor.encode_forward("A") == "M"

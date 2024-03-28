@@ -14,28 +14,28 @@ class Enigma(object):
     Enigma Machine class to encode/decode text
     """
     def __init__(self, plug_board_couples: list[str] | None = None,
-                 rotors: list[str] | None = None,
+                 rotors_models: list[str] | None = None,
                  rotors_start_sequence: str = "",
                  reflector: str = "") -> None:
         """
         Create machine object
         :param plug_board_couples: list of str for exchanging letter of plug board
-        :param rotors: list of rotor names
+        :param rotors_models: list of rotor names
         :param reflector: name of the reflector
         :param start_sequence: initial positions of the rotors
         """
         # create the plugboard
         plugboard_object = Plugboard(plug_board_couples)
         # check if rotors ans rotors_start_sequence are consistent
-        if len(rotors_start_sequence) != len(rotors):
+        if len(rotors_start_sequence) != len(rotors_models):
             raise Exception("start sequence is too short or too long")
         # copy and reverse the rotors names (given L to R and switch R to L)
-        rotors = rotors.copy()
-        rotors.reverse()
+        rotors_models = rotors_models.copy()
+        rotors_models.reverse()
         # reverse the start sequence of rotors as well
         rotors_start_sequence = rotors_start_sequence[::-1]
         # create rotors
-        rotors_objects = [Rotor(name=rotors[i],start_letter=rotors_start_sequence[i]) for i in range(len(rotors))]
+        rotors_objects = [Rotor(model_name=rotors_models[i], start_letter=rotors_start_sequence[i]) for i in range(len(rotors_models))]
         # create the reflector
         reflector_object = Reflector(name=reflector)
         # ----------- build machine structure
@@ -90,3 +90,7 @@ class Enigma(object):
             current = current.next
         output_text += "-------------------------------------"
         return output_text
+
+
+if __name__ == "__main__":
+    print("Run main.py for tests")

@@ -5,7 +5,7 @@ enigma_config = {
     # plug board associations (A<->E and B<->T)
     "plug_board_couples": ["AE", "BT", "ZV"],
     # ROTORS (first rotor: model=I, starts at A, second rotor: model: II, starts at B, ...)
-    "rotors": ["I", "III", "V", "IV"],
+    "rotors_models": ["I", "III", "V", "IV"],
     "rotors_start_sequence": "DGHZ",
     # REFLECTOR (model: C thin model)
     "reflector": "C-thin"

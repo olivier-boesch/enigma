@@ -47,7 +47,7 @@ class Plugboard:
 
     def encode_backward(self, letter:str) -> str | None:
         """
-        Encode forward letter with plugboard if applicable and return the encoded letter
+        Encode backward letter with plugboard if applicable and return the encoded letter
         otherwise just return the encoded letter
         :param letter: letter to encode
         :return: encoded letter
@@ -63,3 +63,20 @@ class Plugboard:
         """
         if self.next is not None:
             self.next.rotate()
+
+
+# tests
+if __name__ == "__main__":
+    pb = Plugboard(["AG", "RZ"])
+    # exchange
+    assert pb.encode_forward("A") == "G"
+    assert pb.encode_forward("G") == "A"
+    # no exchange
+    assert pb.encode_forward("B") == "B"
+    # exchange
+    assert pb.encode_forward("R") == "Z"
+    # as well for backward
+    assert pb.encode_backward("A") == "G"
+    assert pb.encode_backward("G") == "A"
+    assert pb.encode_backward("B") == "B"
+    assert pb.encode_backward("R") == "Z"

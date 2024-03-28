@@ -66,3 +66,9 @@ class Reflector:
         """
         pass
 
+
+# tests
+if __name__ == "__main__":
+    reflector = Reflector(name="B")
+    assert reflector.encode_forward("B") == "R"
+    assert reflector.encode_forward("Y") == "A"
