@@ -35,7 +35,7 @@ class Reflector:
             raise Exception("Invalid Reflector name")
         # stores the sequence
         self.sequence: str = REFLECTORS[name]
-        # create previous and next (next is always None as there's notthing after the reflector)
+        # create previous and next (next is always None as there's nothing after the reflector)
         self.previous = None
         self.next = None
 

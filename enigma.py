@@ -19,10 +19,10 @@ class Enigma(object):
                  reflector: str = "") -> None:
         """
         Create machine object
-        :param plug_board_couples: list of str for exchanging letter of plug board
+        :param plug_board_couples: list of str for exchanging letter of plugboard
         :param rotors_models: list of rotor names
         :param reflector: name of the reflector
-        :param start_sequence: initial positions of the rotors
+        :param rotors_start_sequence: initial letter positions of the rotors
         """
         # create the plugboard
         plugboard_object = Plugboard(plug_board_couples)
@@ -35,7 +35,8 @@ class Enigma(object):
         # reverse the start sequence of rotors as well
         rotors_start_sequence = rotors_start_sequence[::-1]
         # create rotors
-        rotors_objects = [Rotor(model_name=rotors_models[i], start_letter=rotors_start_sequence[i]) for i in range(len(rotors_models))]
+        rotors_objects = [Rotor(model_name=rotors_models[i], start_letter=rotors_start_sequence[i])
+                          for i in range(len(rotors_models))]
         # create the reflector
         reflector_object = Reflector(name=reflector)
         # ----------- build machine structure
@@ -45,10 +46,10 @@ class Enigma(object):
         for i in range(1,len(rotors_objects)):
             rotors_objects[i-1].next = rotors_objects[i]
             rotors_objects[i].previous = rotors_objects[i-1]
-        # connect right rotor with the plugboard
+        # connect right rotor with the plugboard (first one)
         plugboard_object.next = rotors_objects[0]
         rotors_objects[0].previous = plugboard_object
-        # connect the reflector with the left rotor
+        # connect the reflector with the left rotor (last one)
         rotors_objects[-1].next = reflector_object
         reflector_object.previous = rotors_objects[-1]
 
@@ -58,9 +59,7 @@ class Enigma(object):
         :param text: text to encode / decode
         :return: encoded / decoded text
         """
-        # convert to uppercase
-        text = text.upper()
-
+        text = text.upper()  # convert to uppercase
         encoded_text = ""
         for letter in text:
             # encode only if the character is an uppercase letter

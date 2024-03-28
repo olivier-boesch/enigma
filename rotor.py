@@ -103,7 +103,7 @@ class Rotor:
         """
         self.sequence = self.sequence[1:] + self.sequence[0]
         self.rotor_pos = (self.rotor_pos + 1) % 26
-        # a notch is passed - > rotate the next one (on the left)
+        # a notch was passed - > rotate the next one (on the left)
         if self.sequence[-1] in self.notches and self.next is not None:
             self.next.rotate()
 

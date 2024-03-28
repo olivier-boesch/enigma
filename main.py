@@ -2,9 +2,9 @@ from enigma import Enigma
 
 # ENIGMA MACHINE TEST CONFIG
 enigma_config = {
-    # plug board associations (A<->E and B<->T)
+    # plug board associations (A<->E, B<->T and Z<->V)
     "plug_board_couples": ["AE", "BT", "ZV"],
-    # ROTORS (first rotor: model=I, starts at A, second rotor: model: II, starts at B, ...)
+    # ROTORS (first rotor: model=I, starts at D, second rotor: model: III, starts at G, ...)
     "rotors_models": ["I", "III", "V", "IV"],
     "rotors_start_sequence": "DGHZ",
     # REFLECTOR (model: C thin model)
