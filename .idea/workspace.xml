@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="384b03a0-8fc7-4f19-a5d8-623f7ae9b31c" name="Changes" comment="initial version">
+    <list default="true" id="384b03a0-8fc7-4f19-a5d8-623f7ae9b31c" name="Changes" comment="tuning&#10;added tests for nearly all classes&#10;better names for arguments">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enigma.py" beforeDir="false" afterPath="$PROJECT_DIR$/enigma.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/plugboard.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reflector.py" beforeDir="false" afterPath="$PROJECT_DIR$/reflector.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rotor.py" beforeDir="false" afterPath="$PROJECT_DIR$/rotor.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,7 +199,7 @@
       <workItem from="1711560873920" duration="161000" />
       <workItem from="1711566001939" duration="890000" />
       <workItem from="1711568004777" duration="155000" />
-      <workItem from="1711585846524" duration="410000" />
+      <workItem from="1711585846524" duration="860000" />
     </task>
     <task id="LOCAL-00001" summary="initial version">
       <option name="closed" value="true" />
@@ -213,7 +209,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711559047759</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="tuning&#10;added tests for nearly all classes&#10;better names for arguments">
+      <option name="closed" value="true" />
+      <created>1711586432607</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1711586432607</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,11 +225,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial version" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial version" />
+    <MESSAGE value="tuning&#10;added tests for nearly all classes&#10;better names for arguments" />
+    <option name="LAST_COMMIT_MESSAGE" value="tuning&#10;added tests for nearly all classes&#10;better names for arguments" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/enigma$rotor.coverage" NAME="rotor Coverage Results" MODIFIED="1711551555172" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/enigma$main.coverage" NAME="main Coverage Results" MODIFIED="1711566898796" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/enigma$reflector.coverage" NAME="reflector Coverage Results" MODIFIED="1711586127736" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/enigma$rotor.coverage" NAME="rotor Coverage Results" MODIFIED="1711586132093" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/enigma$plugboard.coverage" NAME="plugboard Coverage Results" MODIFIED="1711568112334" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/enigma$main.coverage" NAME="main Coverage Results" MODIFIED="1711586404024" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/enigma$enigma.coverage" NAME="enigma Coverage Results" MODIFIED="1711586251824" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

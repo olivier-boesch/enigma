@@ -4,10 +4,30 @@
 
 Each component of the machine has its own class
 
-### The Plug Board
+### PlugBoard: The Plug Board
 
-### The Rotor
+### Rotor: The Rotor
 
-### The Reflector
+### Reflector : The Reflector
 
-### The machine itself
+### Enigma : The machine itself
+
+usage:
+```python
+enigma_config = {
+    # plug board associations (A<->E,  B<->T and Z<->V)
+    "plug_board_couples": ["AE", "BT", "ZV"],
+    # ROTORS (first rotor: model=I, starts at D, second rotor: model: III, starts at G, ...)
+    "rotors_models": ["I", "III", "V", "IV"],
+    "rotors_start_sequence": "DGHZ",
+    # REFLECTOR (model: C thin model)
+    "reflector": "C-thin"
+}
+
+message = "hello world"
+
+enigma = Enigma(**enigma_config)
+
+encoded_message = enigma.encode_text(message)
+
+```
